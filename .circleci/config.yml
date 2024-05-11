@@ -6,15 +6,15 @@ orbs:
 jobs:
     build:
         executor:
-            name:node/default
-            tag:'10.4'
+            name: node/default
+            tag: '10.4'
         steps:
             - checkout
             - node/with-cache:
-                key:edage
+                key: edage
             - run:
                 name: Install dependencies
-                command:npm install
+                command: npm install
             - run:
                 name: Run tests
                 command: npm run test
